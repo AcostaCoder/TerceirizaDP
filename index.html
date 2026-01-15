@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiriza DP | Assessoria Especializada em Departamento Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Estilo para a nova seção de texto (Diferenciais) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page">
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Terceiriza DP Logo"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Página Inicial</a></li>
+                <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="overlay"></div>
+            <div class="container hero-content">
+                <h1>Assessoria Especializada em <br><span class="highlight-text">Departamento Pessoal</span></h1>
+                <br>
+                <p class="tagline">Apoio técnico e segurança para o crescimento do seu negócio.</p>
+
+                <a href="servicos.html" class="btn-primary">Conheça Nossas Soluções</a>
+                <br>
+                <br>
+                <div class="hero-texts">
+                    <p class="lead">Oferecemos assessoria técnica e estratégica para RHs, DPs internos e escritórios de
+                        contabilidade que buscam excelência operacional e conformidade legal total.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: #fff; color: var(--azul);">
+            <div class="container info-grid">
+                <div>
+                    <h2 style="color: var(--azul); margin-bottom: 20px; font-size: 2.2rem;">Transforme seu DP em uma
+                        vantagem estratégica</h2>
+                    <p>Manter um departamento pessoal interno exige atualização constante e grande foco. Ao terceirizar
+                        com a <strong>Terceiriza DP</strong>, sua empresa elimina custos fixos, reduz riscos de multas
+                        trabalhistas e garante que profissionais especialistas cuidem da sua maior riqueza: seus
+                        colaboradores.</p>
+                    <br>
+                    <p>Nossa assessoria atua preventivamente, identificando possíveis falhas em processos de admissão,
+                        controle de jornada e folha de pagamento antes que eles se tornem um problema jurídico.</p>
+                </div>
+                <div
+                    style="background: #f8f9fa; padding: 40px; border-left: 6px solid var(--laranja); border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="margin-bottom: 20px; color: var(--azul);">Por que nos escolher?</h3>
+                    <ul class="card-list" style="list-style: none;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
+                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Consultoria
+                                Consultiva:</strong> Não apenas enviamos guias, explicamos o "porquê" de cada processo.
+                        </li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
+                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Especialistas em
+                                eSocial:</strong> Domínio total das plataformas governamentais para evitar
+                            inconsistências.</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
+                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Segurança de
+                                Dados:</strong> Tratamos informações sensíveis com o rigor que a LGPD exige.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--laranja); margin-right: 10px;"></i>
+                            <strong>Suporte em Tempo Real:</strong> Respostas rápidas para as dúvidas do seu cotidiano.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--azul); color: #fff; text-align: center;">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="color: var(--laranja); margin-bottom: 25px;">Experiência e Confiança</h2>
+                <p class="lead">A Terceiriza DP, fundada por <strong>Marta Rocha</strong>, nasceu da necessidade de um
+                    suporte técnico que fala a língua do empreendedor. Com anos de atuação na desburocratização das
+                    rotinas trabalhistas, oferecemos a segurança necessária para que você foque apenas no crescimento da
+                    sua empresa.</p>
+                <br>
+                <a href="contato.html" class="btn-primary"
+                    style="background: transparent; border: 2px solid var(--laranja);">Falar com um Especialista</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Terceiriza DP. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

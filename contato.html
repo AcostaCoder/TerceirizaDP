@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Terceiriza DP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="contact-page">
+
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Terceiriza DP Logo"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Página Inicial</a></li>
+                <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contato" class="section bg-contrato">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="section-title" style="text-align: center;">
+                        <h2>Solicite um Orçamento</h2>
+                        <p style="color: #eee; margin-bottom: 30px; margin-top: -30px;">Deixe seus dados e entraremos em
+                            contato rapidamente.</p>
+                    </div>
+
+                    <form id="whatsapp-form">
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Seu Nome Completo" required>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Seu Melhor E-mail" required>
+                        </div>
+
+                        <div class="input-group">
+                            <select id="servico" required>
+                                <option value="" disabled selected>Qual serviço procura?</option>
+                                <option value="Empresas">Departamento Pessoal para Empresas</option>
+                                <option value="MEI">Gestão para MEI</option>
+                                <option value="Domestica">Gestão de Empregada Doméstica</option>
+                                <option value="Outro">Outro assunto</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" placeholder="Como podemos te ajudar hoje?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Terceiriza DP. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

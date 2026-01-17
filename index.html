@@ -4,122 +4,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terceiriza DP | Assessoria Especializada em Departamento Pessoal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Terceiriza DP | Soluções em Departamento Pessoal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
+
     <style>
-        /* Estilo para a nova seção de texto (Diferenciais) */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        :root {
+           
+            --primary-blue: #0a6ea0;
+            --highlight-yellow: #ffb600;
+            --dark-footer: #232f3e;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
         }
 
-        @media (max-width: 900px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* --- Header & Nav --- */
+        .logo-img {
+            height: 80px;
+        }
+        .top-bar {
+            background-color: #f8f9fa;
+            font-size: 0.85rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #e9ecef;
+            
+        }
+
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            padding: 5px 0;
+        }
+
+        .navbar-brand {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: -1px;
+        }
+
+        .nav-link {
+            color: #333 !important;
+            font-weight: 600;
+            margin-right: 15px;
+            font-size: 0.95rem;
+        }
+
+        .btn-header {
+            background-color: var(--highlight-yellow);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+        }
+
+        .btn-header:hover {
+            background-color: #e5a400;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background: linear-gradient(135deg, #fdfdfd 0%, #f0f8ff 100%);
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+            overflow: hidden; /* Evita rolagem lateral indesejada */
+        }
+
+        .hero-title {
+            color: var(--primary-blue);
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-title strong {
+            font-weight: 700;
+        }
+
+        /* --- Elementos Comuns --- */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-header h2 {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        /* O sublinhado amarelo que ela gostou */
+        .section-header-line {
+            width: 100%;
+            height: 2px;
+            background-color: #eee;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .section-header-line::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 2px;
+            background-color: var(--highlight-yellow);
+        }
+
+        /* --- Cards de Serviços (Estilo oHub) --- */
+        .service-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+        }
+
+        .service-img-wrapper {
+            height: 180px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 25px;
+        }
+
+        .service-title {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-link-custom {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        /* --- Seção de Benefícios/Ícones --- */
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--highlight-yellow);
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-footer);
+            color: #aeb4be;
+            padding: 70px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #aeb4be;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--highlight-yellow);
         }
     </style>
 </head>
 
-<body class="home-page">
-    <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="Terceiriza DP Logo"></a>
-            </div>
-            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Página Inicial</a></li>
-                <li><a href="servicos.html" class="nav-link">Serviços</a></li>
-                <li><a href="contato.html" class="nav-link">Contato</a></li>
+<body>
+
+    <div class="top-bar d-none d-md-block">
+        <div class="container d-flex justify-content-between">
+            <span><i class="fas fa-check-circle text-primary me-2"></i>Especialistas em eSocial e Consultoria
+                Trabalhista</span>
+            <span><i class="fas fa-envelope me-2"></i>contato@terceirizadp.com.br</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/logo.png" alt="Logo Terceiriza DP" height="120" class="me-2">
+            
+           
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#empresa">A Empresa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicos">Soluções</a></li>
+                <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                
+                <li class="nav-item ms-3">
+                    <a href="#contato" class="btn btn-header">ORÇAMENTO RÁPIDO</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-6">
+                    <h1 class="hero-title">
+                        Conecte sua empresa à <br>
+                        <strong>Gestão de DP Inteligente</strong>
+                    </h1>
+                    
+                    <div class="mb-4">
+                        <h4 class="fw-bold mb-3 text-primary">Sua empresa precisa de organização no DP?</h4>
+                        <p class="lead text-muted">Solicite uma proposta personalizada em menos de 3 minutos e foque no seu negócio.</p>
+                    </div>
+
+                    <a href="#contato" class="btn btn-lg fw-bold shadow" 
+                       style="background-color: var(--primary-blue); color: white; padding: 15px 30px;">
+                       SOLICITAR COTAÇÃO AGORA
+                    </a>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+                        class="img-fluid rounded shadow" alt="Equipe de DP">
+                </div>
+
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="overlay"></div>
-            <div class="container hero-content">
-                <h1>Assessoria Especializada em <br><span class="highlight-text">Departamento Pessoal</span></h1>
-                <br>
-                <p class="tagline">Apoio técnico e segurança para o crescimento do seu negócio.</p>
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Soluções Especializadas em DP</h2>
+                <div class="section-header-line"></div>
+            </div>
 
-                <a href="servicos.html" class="btn-primary">Conheça Nossas Soluções</a>
-                <br>
-                <br>
-                <div class="hero-texts">
-                    <p class="lead">Oferecemos assessoria técnica e estratégica para RHs, DPs internos e escritórios de
-                        contabilidade que buscam excelência operacional e conformidade legal total.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400"
+                                alt="BPO Financeiro">
+                        </div>
+                        
+                        <div class="service-body">
+                            <h3 class="service-title">BPO de Folha de Pagamento</h3>
+                            <p class="service-text">Realizamos o processamento completo e rigoroso da sua folha de pagamento, abrangendo cálculos de férias, 13º salário, provisões e 
+                                rescisões contratuais. Nossa equipe garante que todos os encargos sociais e impostos sejam apurados com precisão cirúrgica, acompanhando diariamente as constantes
+                                 mudanças na legislação trabalhista brasileira. Com nosso BPO, sua empresa elimina erros de cálculo e riscos de atrasos, garantindo a satisfação dos colaboradores e 
+                                 total tranquilidade para a sua gestão financeira.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="img/consultoria.png"
+                                alt="Consultoria">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Consultoria Trabalhista</h3>
+                            <p class="service-text">Oferecemos um suporte consultivo de alto nível, focado na análise preventiva de riscos e na auditoria detalhada de todos os seus processos internos de Departamento Pessoal.
+                                 Identificamos vulnerabilidades antes que se tornem passivos trabalhistas onerosos, orientando sua empresa sobre as melhores práticas e interpretações da CLT. 
+                                Atuamos como um escudo jurídico para o seu negócio, revisando contratos e rotinas para assegurar que sua operação esteja sempre protegida contra multas e processos judiciais.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="img/esocial.png"
+                                alt="eSocial">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Gestão de eSocial</h3>
+                            <p class="service-text">Gerenciamos todo o fluxo de informações para o eSocial, garantindo o envio correto, seguro e rigorosamente tempestivo de todos os eventos exigidos pelo governo federal.
+                                 Nossa plataforma utiliza tecnologia de ponta para realizar validações prévias, evitando inconsistências de dados que geram multas pesadas por descumprimento de prazos.
+                                 Monitoramos constantemente o status das transmissões e as atualizações do sistema, assegurando que sua empresa permaneça em conformidade total de forma transparente e simplificada.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="img/admissao.png"
+                                alt="Recrutamento">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Admissão Digital</h3>
+                            <p class="service-text">Modernize a porta de entrada da sua empresa com um processo de onboarding totalmente digital, ágil e intuitivo para o novo colaborador. Nossa solução permite a coleta e 
+                                validação eletrônica de documentos em poucos minutos, eliminando o uso excessivo de papel e a necessidade de deslocamentos físicos. O registro é realizado de forma automática e integrada, 
+                                garantindo que o novo talento comece sua jornada com uma experiência positiva, tecnológica e em total conformidade com as normas de proteção de dados.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&q=80&w=400"
+                                alt="Benefícios">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Gestão de Benefícios</h3>
+                            <p class="service-text">Administramos de ponta a ponta o pacote de benefícios da sua equipe, cuidando da compra, distribuição e movimentação de vale-transporte, refeição, planos de saúde e seguros.
+                                Realizamos o controle rigoroso de faturas e o acompanhamento de prazos de vigência, otimizando os custos operacionais e garantindo que os benefícios cheguem corretamente aos seus colaboradores.
+                                Nossa gestão permite que sua empresa ofereça convênios atrativos sem o peso da burocracia, melhorando o engajamento e a retenção de talentos.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card d-flex align-items-center justify-content-center bg-light"
+                        style="border: 2px dashed var(--primary-blue);">
+                        <div class="text-center p-4">
+                            <h4 class="text-primary mb-3">Sua necessidade é específica?</h4>
+                            <p class="small mb-4">Fale com nossos consultores e desenhe um projeto sob medida.</p>
+                            <a href="#contato" class="btn btn-header">FALAR COM CONSULTOR</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+<section id="empresa" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
+                    class="img-fluid rounded shadow-lg" alt="Reunião de negócios">
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <h2 class="mb-4" style="color: var(--primary-blue); font-weight: 700;">Muito mais que apenas processar folhas.</h2>
+                    <h5 class="mb-4 text-muted">Somos o braço direito do RH da sua empresa.</h5>
+                    <p>
+                        Transforme seu RH trocando a burocracia pela estratégia e segurança total. No cenário empresarial atual, manter um Departamento Pessoal interno exige mais do que organização; demanda atualização constante e tecnologia de ponta.
 
-        <section class="section" style="background: #fff; color: var(--azul);">
-            <div class="container info-grid">
-                <div>
-                    <h2 style="color: var(--azul); margin-bottom: 20px; font-size: 2.2rem;">Transforme seu DP em uma
-                        vantagem estratégica</h2>
-                    <p>Manter um departamento pessoal interno exige atualização constante e grande foco. Ao terceirizar
-                        com a <strong>Terceiriza DP</strong>, sua empresa elimina custos fixos, reduz riscos de multas
-                        trabalhistas e garante que profissionais especialistas cuidem da sua maior riqueza: seus
-                        colaboradores.</p>
-                    <br>
-                    <p>Nossa assessoria atua preventivamente, identificando possíveis falhas em processos de admissão,
-                        controle de jornada e folha de pagamento antes que eles se tornem um problema jurídico.</p>
+A Terceiriza DP surge para permitir que sua empresa troque a complexidade operacional pela tranquilidade de uma gestão feita por especialistas seniores. Unimos tecnologia de ponta ao atendimento humanizado para simplificar a burocracia trabalhista, garantindo que sua maior riqueza — seus colaboradores — receba o cuidado que merece.</p>
+                    <p>
+                        <strong>Por que escolher a Terceiriza DP?</strong> Entendemos que cada empresa possui uma cultura única. Unimos tecnologia ao atendimento humanizado para garantir que profissionais seniores cuidem da sua maior riqueza: seus colaboradores.
+                    </p>
+                    <p class="small">
+                        <i class="fas fa-check text-primary me-2"></i> <strong>Eficiência:</strong> Elimine custos fixos e infraestruturas pesadas.<br>
+                        <i class="fas fa-check text-primary me-2"></i> <strong>Segurança:</strong> Atuamos preventivamente para evitar multas.<br>
+                        <i class="fas fa-check text-primary me-2"></i> <strong>Foco:</strong> Deixe seu RH livre para focar no engajamento das pessoas.
+                    </p>
                 </div>
-                <div
-                    style="background: #f8f9fa; padding: 40px; border-left: 6px solid var(--laranja); border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <h3 style="margin-bottom: 20px; color: var(--azul);">Por que nos escolher?</h3>
-                    <ul class="card-list" style="list-style: none;">
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
-                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Consultoria
-                                Consultiva:</strong> Não apenas enviamos guias, explicamos o "porquê" de cada processo.
+            </div>
+        </div>
+
+        <div class="py-4"></div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="pe-lg-5">
+                    <h3 class="mb-4" style="color: var(--primary-blue); font-weight: 700;">Soluções para todos os momentos do seu negócio</h3>
+                    <p>
+                        Ao confiar seu Departamento Pessoal à nossa assessoria, sua empresa conquista eficiência através de uma plataforma em nuvem ágil e segura. Focamos em três pilares fundamentais:
+
+Eficiência Operacional: Elimine custos fixos e infraestruturas pesadas. Conectamos sua empresa aos melhores processos de gestão.
+
+Segurança Jurídica e Conformidade: Atuamos preventivamente na admissão, controle de jornada e folha para evitar multas e passivos trabalhistas.
+
+Foco no Capital Humano: Com a conformidade total com a CLT garantida, seu time de RH fica livre para focar no desenvolvimento e engajamento das pessoas. </p>
+                    <p><strong>O que entregamos para o seu negócio:</strong></p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Especialistas Seniores: Atendimento consultivo e direto.</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Tecnologia Segura: Dados protegidos e processos 100% digitais.</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Gestão Preventiva: Proteção contra passivos trabalhistas.</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Conformidade total com a CLT e eSocial.</li>
+                    </ul>
+                    <p class="mt-4 fw-bold text-primary">Deixe a burocracia conosco e foque no seu crescimento.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                <img src="img/escritorio.png" class="img-fluid rounded shadow-lg" alt="Escritório Terceiriza DP">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="diferenciais" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Por que escolher a Terceiriza DP?</h2>
+                <div class="section-header-line mx-auto" style="max-width: 60px;"></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-3 benefit-item">
+                    <i class="fas fa-shield-alt benefit-icon"></i>
+                    <h5 class="benefit-title">Segurança Jurídica</h5>
+                    <p class="small text-muted">Processos auditados para evitar multas e passivos trabalhistas.</p>
+                </div>
+                <div class="col-md-3 benefit-item">
+                    <i class="fas fa-headset benefit-icon"></i>
+                    <h5 class="benefit-title">Suporte Humanizado</h5>
+                    <p class="small text-muted">Nada de robôs. Fale com especialistas reais quando precisar.</p>
+                </div>
+                <div class="col-md-3 benefit-item">
+                    <i class="fas fa-bolt benefit-icon"></i>
+                    <h5 class="benefit-title">Agilidade na Entrega</h5>
+                    <p class="small text-muted">Holerites e guias entregues sempre antes do prazo.</p>
+                </div>
+                <div class="col-md-3 benefit-item">
+                    <i class="fas fa-coins benefit-icon"></i>
+                    <h5 class="benefit-title">Redução de Custos</h5>
+                    <p class="small text-muted">Economize até 40% comparado a um departamento interno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 style="color: var(--primary-blue); font-weight: 700;">Solicite seu Orçamento</h2>
+                    <p class="text-muted">Preencha os dados abaixo. É rápido, sem compromisso e retornamos em até 1
+                        hora.</p>
+                    <div class="section-header-line mx-auto" style="max-width: 60px;"></div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <form id="whatsappForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nome" class="form-label small fw-bold">Seu Nome</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Ex: João Silva"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="empresa" class="form-label small fw-bold">Nome da Empresa</label>
+                                        <input type="text" class="form-control" id="empresa"
+                                            placeholder="Ex: Silva Ltda" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="servico" class="form-label small fw-bold">Qual serviço você
+                                        precisa?</label>
+                                    <select class="form-select" id="servico">
+                                        <option value="Folha de Pagamento">BPO de Folha de Pagamento</option>
+                                        <option value="Consultoria Trabalhista">Consultoria Trabalhista</option>
+                                        <option value="eSocial">Gestão de eSocial</option>
+                                        <option value="Outros">Outros / Não sei ainda</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensagem" class="form-label small fw-bold">Detalhes (Opcional)</label>
+                                    <textarea class="form-control" id="mensagem" rows="3"
+                                        placeholder="Quantos funcionários? Alguma dúvida específica?"></textarea>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-lg text-white fw-bold"
+                                        style="background-color: #25D366;">
+                                        <i class="fab fa-whatsapp me-2"></i> ENVIAR PEDIDO NO WHATSAPP
+                                    </button>
+                                </div>
+                                <p class="text-center small text-muted mt-3 mb-0">Seus dados estão seguros. Não enviamos
+                                    spam.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5 class="mb-3">TERCEIRIZA DP</h5>
+                    <p class="text-white-50 mb-4">
+                        A plataforma completa para gestão de Departamento Pessoal. Conectamos sua empresa à eficiência
+                        operacional, permitindo que você foque no crescimento do seu negócio.
+                    </p>
+                    <div>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <h5>Fale Conosco</h5>
+                    <ul class="fa-ul" style="margin-left: 1.5em;">
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-map-marker-alt text-warning"></i></span>
+                            R. Vera Cruz, 393 - Conceição, Diadema - SP, 09911-490
                         </li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
-                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Especialistas em
-                                eSocial:</strong> Domínio total das plataformas governamentais para evitar
-                            inconsistências.</li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle"
-                                style="color: var(--laranja); margin-right: 10px;"></i> <strong>Segurança de
-                                Dados:</strong> Tratamos informações sensíveis com o rigor que a LGPD exige.</li>
-                        <li><i class="fas fa-check-circle" style="color: var(--laranja); margin-right: 10px;"></i>
-                            <strong>Suporte em Tempo Real:</strong> Respostas rápidas para as dúvidas do seu cotidiano.
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fab fa-whatsapp text-warning"></i></span>
+                            (11) 97015-2735
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-envelope text-warning"></i></span>
+                            contato@terceirizadp.com.br
                         </li>
                     </ul>
                 </div>
             </div>
-        </section>
 
-        <section class="section" style="background: var(--azul); color: #fff; text-align: center;">
-            <div class="container" style="max-width: 800px;">
-                <h2 style="color: var(--laranja); margin-bottom: 25px;">Experiência e Confiança</h2>
-                <p class="lead">A Terceiriza DP, fundada por <strong>Marta Rocha</strong>, nasceu da necessidade de um
-                    suporte técnico que fala a língua do empreendedor. Com anos de atuação na desburocratização das
-                    rotinas trabalhistas, oferecemos a segurança necessária para que você foque apenas no crescimento da
-                    sua empresa.</p>
-                <br>
-                <a href="contato.html" class="btn-primary"
-                    style="background: transparent; border: 2px solid var(--laranja);">Falar com um Especialista</a>
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2024 Terceiriza DP. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">Feito com tecnologia e excelência.</p>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Terceiriza DP. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para fazer o botão do WhatsApp funcionar
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            var nome = document.getElementById('nome').value;
+            var empresa = document.getElementById('empresa').value;
+            var servico = document.getElementById('servico').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            var texto = "*Nova Solicitação de Orçamento (Site)*\n\n" +
+                        "👤 *Nome:* " + nome + "\n" +
+                        "🏢 *Empresa:* " + empresa + "\n" +
+                        "📌 *Interesse:* " + servico + "\n" +
+                        "📝 *Msg:* " + mensagem;
+
+            var textoCodificado = encodeURIComponent(texto);
+            var numeroWhatsApp = "5511970152735"; 
+
+            window.open("https://wa.me/" + numeroWhatsApp + "?text=" + textoCodificado, "_blank");
+        });
+    </script>
 </body>
 
 </html>

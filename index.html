@@ -428,12 +428,6 @@
         </div>
     </header>
 
-    Analisando o seu CSS, descobri o motivo: os seletores do Bootstrap (.row e .col) em conjunto com as classes Flexbox que usamos no HTML acabaram "comprimindo" o link, e como não havia uma definição de display específica para o span dentro de um container Flex, ele ficou com tamanho zero ou invisível.
-
-Aqui está o código da seção de serviços 100% ajustado para o seu CSS atual, garantindo que o "SAIBA MAIS" apareça e fique sempre alinhado ao fundo do card.
-
-HTML da Seção (Substitua a sua <section id="servicos"> por esta):
-HTML
 <section id="servicos" class="section-padding">
     <div class="container">
         <div class="section-header">

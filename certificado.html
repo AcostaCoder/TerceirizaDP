@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPO de Folha | Terceiriza DP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Mesmo CSS do Index --- */
+        :root {
+            --primary-blue: #0a6ea0;
+            --highlight-yellow: #ffb600;
+            --dark-footer: #232f3e;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+        }
+
+        body { font-family: 'Open Sans', sans-serif; color: #444; line-height: 1.6; }
+        .logo-img { height: 80px; }
+        .top-bar { background-color: #e9ecef; font-size: 0.85rem; padding: 5px 0; border-bottom: 1px solid #e9ecef; }
+        .navbar { background: #fff; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); padding: 5px 0; }
+        .navbar-brand { color: var(--primary-blue); font-weight: 800; font-size: 1.8rem; letter-spacing: -1px; }
+        .nav-link { color: #333 !important; font-weight: 600; margin-right: 15px; font-size: 0.95rem; }
+        .btn-header { background-color: var(--highlight-yellow); color: #000; font-weight: 700; border: none; padding: 10px 25px; border-radius: 4px; }
+        .btn-header:hover { background-color: #e5a400; }
+        
+        /* Estilos Específicos das Sub-páginas */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #054a6b 100%);
+            padding: 60px 0;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .page-title { font-weight: 700; font-size: 2.5rem; }
+        .breadcrumb-custom a { color: var(--highlight-yellow); text-decoration: none; font-weight: 600; }
+        .content-section h3 { color: var(--primary-blue); font-weight: 700; margin-top: 30px; margin-bottom: 15px; }
+        .check-list li { margin-bottom: 10px; }
+        .cta-box { background-color: var(--bg-light); border-left: 5px solid var(--highlight-yellow); padding: 30px; margin-top: 40px; border-radius: 4px; }
+
+        /* Footer igual ao Index */
+        footer { background-color: var(--dark-footer); color: #aeb4be; padding: 70px 0 20px; font-size: 0.9rem; }
+        footer h5 { color: #fff; font-weight: 600; margin-bottom: 25px; font-size: 1.1rem; }
+        footer ul { padding-left: 0; list-style: none; }
+        footer ul li { margin-bottom: 12px; }
+        footer a { color: #aeb4be; text-decoration: none; transition: 0.2s; }
+        footer a:hover { color: var(--highlight-yellow); }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar d-none d-md-block">
+        <div class="container d-flex justify-content-between">
+            <span><i class="fas fa-check-circle text-primary me-2"></i>Especialistas em eSocial e Consultoria Trabalhista</span>
+            <span><i class="fas fa-envelope me-2"></i>dp.folha42@gmail.com</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="Logo Terceiriza DP" height="80" class="me-2"> 
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#empresa">A Empresa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicos">Soluções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="index.html#contato" class="btn btn-header">ORÇAMENTO RÁPIDO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                      
+                        <h1 class="page-title">Certificação Digital</h1>
+                        <p class="lead mb-0">A identidade da sua empresa no mundo eletrônico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container pb-5 content-section">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="img/certificado.png" class="img-fluid rounded shadow mb-4 w-100" alt="Certificado Digital" style="max-height: 400px; object-fit: cover;">
+                    
+                    <h3>Indispensável para o Negócio</h3>
+                    <p>Sem um Certificado Digital válido, sua empresa para. Ele é obrigatório para emitir notas fiscais, enviar dados ao eSocial, acessar o Conectividade Social (FGTS) e assinar contratos digitalmente. Nós gerenciamos o ciclo de vida dos seus certificados para evitar bloqueios operacionais.</p>
+
+                    <h3>Nossa atuação inclui:</h3>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="fas fa-check text-primary me-2"></i> Orientação para emissão e renovação (A1 e A3).</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> Controle de validade para evitar expiração surpresa.</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> Configuração nos sistemas de governo (eCAC, Conectividade).</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> Procurações Eletrônicas para o Contador/DP.</li>
+                    </ul>
+                    
+                    <p>Facilitamos a emissão do certificado A1 (Arquivo Digital), que permite maior flexibilidade e agilidade nos processos de Departamento Pessoal, eliminando a necessidade de cartões físicos e tokens.</p>
+
+                    <div class="cta-box text-center text-md-start d-md-flex align-items-center justify-content-between">
+                        <div>
+                            <h4 class="fw-bold mb-1">Precisa de Certificado?</h4>
+                            <p class="mb-0">Nós orientamos todo o processo de aquisição.</p>
+                        </div>
+                        <a href="index.html#contato" class="btn btn-header mt-3 mt-md-0">FALAR COM ESPECIALISTA</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="card border-0 shadow-sm bg-light p-4">
+                        <h4 class="mb-3 text-primary">Outros Serviços</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="bpo.html" class="text-decoration-none text-secondary">BPO de Folha</a></li>
+                            <li class="mb-2"><a href="esocial.html" class="text-decoration-none text-secondary">Gestão de eSocial</a></li>
+                            <li class="mb-2"><a href="consultoria.html" class="text-decoration-none text-secondary">Consultoria Trabalhista</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5 class="mb-3">TERCEIRIZA DP</h5>
+                    <p class="text-white-50 mb-4">
+                        A plataforma completa para gestão de Departamento Pessoal. Conectamos sua empresa à eficiência operacional.
+                    </p>
+                    <div>
+                        <a href="#" class="me-3 text-white social-hover"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="me-3 text-white social-hover"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5>Fale Conosco</h5>
+                    <ul class="fa-ul" style="margin-left: 1.5em;">
+                        <li class="mb-2"><span class="fa-li"><i class="fas fa-map-marker-alt text-warning"></i></span> R. Vera Cruz, 393 - Conceição, Diadema - SP</li>
+                        <li class="mb-2"><span class="fa-li"><i class="fab fa-whatsapp text-warning"></i></span> (11) 97015-2735</li>
+                        <li class="mb-2"><span class="fa-li"><i class="fas fa-envelope text-warning"></i></span> dp.folha42@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-md-6"><p class="small mb-0">© 2026 Terceiriza DP. Todos os direitos reservados.</p></div>
+                <div class="col-md-6 text-end"><p class="small mb-0">Feito com tecnologia e excelência.</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

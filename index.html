@@ -8,12 +8,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-
             --primary-blue: #0a6ea0;
             --highlight-yellow: #ffb600;
             --dark-footer: #232f3e;
@@ -27,7 +25,6 @@
             line-height: 1.6;
         }
 
-
         .logo-img {
             height: 80px;
         }
@@ -37,7 +34,6 @@
             font-size: 0.85rem;
             padding: 5px 0;
             border-bottom: 1px solid #e9ecef;
-
         }
 
         .navbar {
@@ -67,12 +63,13 @@
             border: none;
             padding: 10px 25px;
             border-radius: 4px;
+            text-decoration: none;
         }
 
         .btn-header:hover {
             background-color: #e5a400;
+            color: #000;
         }
-
 
         .hero-section {
             background: linear-gradient(135deg, #fdfdfd 0%, #f0f8ff 100%);
@@ -92,7 +89,6 @@
             font-weight: 700;
         }
 
-
         .section-padding {
             padding: 60px 0;
         }
@@ -107,7 +103,6 @@
             font-weight: 600;
             font-size: 1.8rem;
         }
-
 
         .section-header-line {
             width: 100%;
@@ -126,7 +121,6 @@
             height: 2px;
             background-color: var(--highlight-yellow);
         }
-
 
         .service-card {
             background: #fff;
@@ -180,7 +174,6 @@
             font-size: 0.8rem;
         }
 
-
         .benefit-item {
             text-align: center;
             padding: 20px;
@@ -197,114 +190,6 @@
             color: #444;
             margin-bottom: 10px;
         }
-
-       
-
-        /* Janela Principal */
-        .chat-box {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 320px;
-            height: 450px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 1000;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Topo do Chat */
-        .chat-header {
-            background: #004aad;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Área das Mensagens */
-        .chat-window {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f7f9fb;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* Estilo das Bolhas de Mensagem */
-        .chat-icon::before {
-            content: "💬";
-        }
-
-        #send-btn::before {
-            content: "➤";
-        }
-
-        .msg {
-            max-width: 80%;
-            padding: 10px 15px;
-            border-radius: 15px;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .bot-msg {
-            background: #e1e8f0;
-            color: #333;
-            align-self: flex-start;
-            border-bottom-left-radius: 2px;
-        }
-
-        .user-msg {
-            background: #004aad;
-            color: white;
-            align-self: flex-end;
-            border-bottom-right-radius: 2px;
-        }
-
-        /* Rodapé/Input */
-        .chat-input-area {
-            padding: 10px;
-            border-top: 1px solid #eee;
-            display: flex;
-            gap: 5px;
-        }
-
-        .chat-input-area input {
-            flex: 1;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            padding: 8px 15px;
-            outline: none;
-        }
-
-        .chat-input-area button {
-            background: #004aad;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
-        }
-
-        .chat-input-area input:disabled {
-            background: #f0f0f0;
-            cursor: not-allowed;
-        }
-
-        .close-btn {
-            cursor: pointer;
-            font-size: 20px;
-        }
-
 
         /* --- Footer --- */
         footer {
@@ -355,7 +240,6 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/logo.png" alt="Logo Terceiriza DP" height="120" class="me-2">
-
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
@@ -388,12 +272,11 @@
 
                     <div class="mb-4">
                         <h4 class="fw-bold mb-3 text-primary">Sua empresa precisa de organização no DP?</h4>
-                        <p class="lead text-muted">Solicite uma proposta personalizada e foque no
-                            seu negócio.</p>
+                        <p class="lead text-muted">Solicite uma proposta personalizada e foque no seu negócio.</p>
                     </div>
 
                     <a href="#contato" class="btn btn-lg fw-bold shadow"
-                        style="background-color: var(--primary-blue); color: white; padding: 15px 30px;">
+                        style="background-color: var(--primary-blue); color: white; padding: 15px 30px; text-decoration: none;">
                         SOLICITAR COTAÇÃO AGORA
                     </a>
                 </div>
@@ -407,103 +290,103 @@
         </div>
     </header>
 
-<section id="servicos" class="section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>Soluções Especializadas em DP</h2>
-            <div class="section-header-line"></div>
-            <p class="text-muted mt-2">Clique nos cartões abaixo para saber mais detalhes.</p>
-        </div>
-
-        <div class="row g-4 d-flex align-items-stretch">
-            <div class="col-md-6 col-lg-4">
-                <a href="bpo.html" class="service-card text-decoration-none d-flex flex-column">
-                    <div class="service-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400" alt="BPO Financeiro">
-                    </div>
-                    <div class="service-body d-flex flex-column flex-grow-1">
-                        <h3 class="service-title">BPO de Folha de Pagamento</h3>
-                        <p class="service-text">Realizamos o processamento completo e rigoroso da sua folha de pagamento, abrangendo cálculos de férias, 13º salário e rescisões.</p>
-                        <div class="mt-auto pt-3">
-                            <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
-                        </div>
-                    </div>
-                </a>
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Soluções Especializadas em DP</h2>
+                <div class="section-header-line"></div>
+                <p class="text-muted mt-2">Clique nos cartões abaixo para saber mais detalhes.</p>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <a href="consultoria.html" class="service-card text-decoration-none d-flex flex-column">
-                    <div class="service-img-wrapper">
-                        <img src="img/consultoria.png" alt="Consultoria">
-                    </div>
-                    <div class="service-body d-flex flex-column flex-grow-1">
-                        <h3 class="service-title">Consultoria Trabalhista</h3>
-                        <p class="service-text">Suporte consultivo de alto nível, focado na análise preventiva de riscos e auditoria detalhada. Atuamos como um escudo jurídico.</p>
-                        <div class="mt-auto pt-3">
-                            <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+            <div class="row g-4 d-flex align-items-stretch">
+                <div class="col-md-6 col-lg-4">
+                    <a href="bpo.html" class="service-card text-decoration-none d-flex flex-column">
+                        <div class="service-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400" alt="BPO Financeiro">
                         </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <a href="esocial.html" class="service-card text-decoration-none d-flex flex-column">
-                    <div class="service-img-wrapper">
-                        <img src="img/esocial.png" alt="eSocial">
-                    </div>
-                    <div class="service-body d-flex flex-column flex-grow-1">
-                        <h3 class="service-title">Gestão de eSocial</h3>
-                        <p class="service-text">Gerenciamos todo o fluxo de informações, garantindo o envio correto e tempestivo dos eventos. Evite multas por descumprimento.</p>
-                        <div class="mt-auto pt-3">
-                            <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                        <div class="service-body d-flex flex-column flex-grow-1">
+                            <h3 class="service-title">BPO de Folha de Pagamento</h3>
+                            <p class="service-text">Realizamos o processamento completo e rigoroso da sua folha de pagamento, abrangendo cálculos de férias, 13º salário e rescisões.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="col-md-6 col-lg-4">
-                <a href="beneficios.html" class="service-card text-decoration-none d-flex flex-column">
-                    <div class="service-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&q=80&w=400" alt="Benefícios">
-                    </div>
-                    <div class="service-body d-flex flex-column flex-grow-1">
-                        <h3 class="service-title">Gestão de Benefícios</h3>
-                        <p class="service-text">Administramos vale-transporte, refeição, saúde e seguros. Controle rigoroso de faturas para otimizar custos operacionais.</p>
-                        <div class="mt-auto pt-3">
-                            <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                <div class="col-md-6 col-lg-4">
+                    <a href="consultoria.html" class="service-card text-decoration-none d-flex flex-column">
+                        <div class="service-img-wrapper">
+                            <img src="img/consultoria.png" alt="Consultoria">
                         </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <a href="certificado.html" class="service-card text-decoration-none d-flex flex-column">
-                    <div class="service-img-wrapper">
-                        <img src="img/certificado.png" alt="Certificação Digital">
-                    </div>
-                    <div class="service-body d-flex flex-column flex-grow-1">
-                        <h3 class="service-title">Certificação Digital</h3>
-                        <p class="service-text">Conecte sua empresa aos órgãos governamentais com segurança. Gerenciamos a utilização e renovação para evitar bloqueios.</p>
-                        <div class="mt-auto pt-3">
-                            <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                        <div class="service-body d-flex flex-column flex-grow-1">
+                            <h3 class="service-title">Consultoria Trabalhista</h3>
+                            <p class="service-text">Suporte consultivo de alto nível, focado na análise preventiva de riscos e auditoria detalhada. Atuamos como um escudo jurídico.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card d-flex align-items-center justify-content-center bg-light"
-                    style="border: 2px dashed var(--primary-blue); min-height: 250px;">
-                    <div class="text-center p-4">
-                        <h4 class="text-primary mb-3">Sua necessidade é específica?</h4>
-                        <p class="small mb-4">Fale com nossos consultores e desenhe um projeto sob medida para sua empresa.</p>
-                        <a href="#contato" class="btn btn-header">FALAR COM CONSULTOR</a>
+                <div class="col-md-6 col-lg-4">
+                    <a href="esocial.html" class="service-card text-decoration-none d-flex flex-column">
+                        <div class="service-img-wrapper">
+                            <img src="img/esocial.png" alt="eSocial">
+                        </div>
+                        <div class="service-body d-flex flex-column flex-grow-1">
+                            <h3 class="service-title">Gestão de eSocial</h3>
+                            <p class="service-text">Gerenciamos todo o fluxo de informações, garantindo o envio correto e tempestivo dos eventos. Evite multas por descumprimento.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <a href="beneficios.html" class="service-card text-decoration-none d-flex flex-column">
+                        <div class="service-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&q=80&w=400" alt="Benefícios">
+                        </div>
+                        <div class="service-body d-flex flex-column flex-grow-1">
+                            <h3 class="service-title">Gestão de Benefícios</h3>
+                            <p class="service-text">Administramos vale-transporte, refeição, saúde e seguros. Controle rigoroso de faturas para otimizar custos operacionais.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <a href="certificado.html" class="service-card text-decoration-none d-flex flex-column">
+                        <div class="service-img-wrapper">
+                            <img src="img/certificado.png" alt="Certificação Digital">
+                        </div>
+                        <div class="service-body d-flex flex-column flex-grow-1">
+                            <h3 class="service-title">Certificação Digital</h3>
+                            <p class="service-text">Conecte sua empresa aos órgãos governamentais com segurança. Gerenciamos a utilização e renovação para evitar bloqueios.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="btn-link-custom">SAIBA MAIS <i class="fas fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card d-flex align-items-center justify-content-center bg-light"
+                        style="border: 2px dashed var(--primary-blue); min-height: 250px;">
+                        <div class="text-center p-4">
+                            <h4 class="text-primary mb-3">Sua necessidade é específica?</h4>
+                            <p class="small mb-4">Fale com nossos consultores e desenhe um projeto sob medida para sua empresa.</p>
+                            <a href="#contato" class="btn btn-header">FALAR COM CONSULTOR</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="empresa" class="section-padding bg-light">
         <div class="container">
@@ -521,7 +404,6 @@
                             Transforme seu RH trocando a burocracia pela estratégia e segurança total. No cenário
                             empresarial atual, manter um Departamento Pessoal interno exige mais do que organização;
                             demanda atualização constante e tecnologia de ponta.
-
                             A Terceiriza DP surge para permitir que sua empresa troque a complexidade operacional pela
                             tranquilidade de uma gestão feita por especialistas seniores. Unimos tecnologia de ponta ao
                             atendimento humanizado para simplificar a burocracia trabalhista, garantindo que sua maior
@@ -553,25 +435,18 @@
                         <p>
                             Ao confiar seu Departamento Pessoal à nossa assessoria, sua empresa conquista eficiência
                             através de uma plataforma em nuvem ágil e segura. Focamos em três pilares fundamentais:
-
                             Eficiência Operacional: Elimine custos fixos e infraestruturas pesadas. Conectamos sua
                             empresa aos melhores processos de gestão.
-
                             Segurança Jurídica e Conformidade: Atuamos preventivamente na admissão, controle de jornada
                             e folha para evitar multas e passivos trabalhistas.
-
                             Foco no Capital Humano: Com a conformidade total com a CLT garantida, seu time de RH fica
                             livre para focar no desenvolvimento e engajamento das pessoas. </p>
                         <p><strong>O que entregamos para o seu negócio:</strong></p>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Especialistas Seniores:
-                                Atendimento consultivo e direto.</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Tecnologia Segura: Dados
-                                protegidos e processos 100% digitais.</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Gestão Preventiva: Proteção
-                                contra passivos trabalhistas.</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Conformidade total com a CLT
-                                e eSocial.</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Especialistas Seniores: Atendimento consultivo e direto.</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Tecnologia Segura: Dados protegidos e processos 100% digitais.</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Gestão Preventiva: Proteção contra passivos trabalhistas.</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Conformidade total com a CLT e eSocial.</li>
                         </ul>
                         <p class="mt-4 fw-bold text-primary">Deixe a burocracia conosco e foque no seu crescimento.</p>
                     </div>
@@ -595,26 +470,25 @@
                     <i class="fas fa-shield-alt benefit-icon"></i>
                     <h5 class="benefit-title">Segurança Jurídica</h5>
                     <p class="small text-muted">Processos rigorosamente auditados e atualizados conforme a legislação trabalhista vigente, 
-                        reduzindo riscos de multas, ações judiciais e passivos trabalhistas. Garantimos conformidade e tranquilidade para 
-                        que sua empresa opere com total segurança jurídica.</p>
+                        reduzindo riscos de multas, ações judiciais e passivos trabalhistas.</p>
                 </div>
                 <div class="col-md-3 benefit-item">
                     <i class="fas fa-headset benefit-icon"></i>
                     <h5 class="benefit-title">Suporte Humanizado</h5>
                     <p class="small text-muted">Atendimento direto com especialistas em Departamento Pessoal, sem respostas automáticas ou 
-                        atendimentos genéricos. Você conta com suporte ágil, próximo e personalizado sempre que precisar de orientação ou solução.</p>
+                        atendimentos genéricos. Suporte ágil e personalizado.</p>
                 </div>
                 <div class="col-md-3 benefit-item">
                     <i class="fas fa-bolt benefit-icon"></i>
                     <h5 class="benefit-title">Agilidade na Entrega</h5>
                     <p class="small text-muted">Processos organizados e automatizados garantem a entrega de holerites, encargos e obrigações sempre dentro
-                        — e muitas vezes antes — dos prazos legais, evitando atrasos, penalidades e preocupações operacionais.</p>
+                        dos prazos legais, evitando atrasos.</p>
                 </div>
                 <div class="col-md-3 benefit-item">
                     <i class="fas fa-coins benefit-icon"></i>
                     <h5 class="benefit-title">Redução de Custos</h5>
                     <p class="small text-muted">Reduza custos operacionais eliminando despesas com contratação, treinamento e estrutura interna. 
-                        Nossa terceirização oferece eficiência profissional com economia que pode chegar a até 40% em comparação a um departamento próprio.</p>
+                        Economia que pode chegar a até 40%.</p>
                 </div>
             </div>
         </div>
@@ -625,7 +499,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mb-5">
                     <h2 style="color: var(--primary-blue); font-weight: 700;">Solicite seu Orçamento</h2>
-                    <p class="text-muted">Preencha os dados abaixo.  É rápido e sem compromisso.</p>
+                    <p class="text-muted">Preencha os dados abaixo. É rápido e sem compromisso.</p>
                     <div class="section-header-line mx-auto" style="max-width: 60px;"></div>
                 </div>
             </div>
@@ -638,44 +512,37 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="nome" class="form-label small fw-bold">Seu Nome</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Ex: João Silva"
-                                            required>
+                                        <input type="text" class="form-control" id="nome" placeholder="Ex: João Silva" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="empresa" class="form-label small fw-bold">Nome da Empresa</label>
-                                        <input type="text" class="form-control" id="empresa"
-                                            placeholder="Ex: Silva Ltda" required>
+                                        <input type="text" class="form-control" id="empresa" placeholder="Ex: Silva Ltda" required>
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="servico" class="form-label small fw-bold">Qual serviço você
-                                        precisa?</label>
+                                    <label for="servico" class="form-label small fw-bold">Qual serviço você precisa?</label>
                                     <select class="form-select" id="servico">
-                                        <option value="Folha de Pagamento">BPO de Folha de Pagamento</option>
+                                        <option value="BPO de Folha de Pagamento">BPO de Folha de Pagamento</option>
                                         <option value="Consultoria Trabalhista">Consultoria Trabalhista</option>
-                                        <option value="eSocial">Gestão de eSocial</option>
-
+                                        <option value="Gestão de eSocial">Gestão de eSocial</option>
                                         <option value="Gestão de Benefícios">Gestão de Benefícios</option>
                                         <option value="Certificação Digital">Certificação Digital</option>
-                                        <option value="Outros">Outros </option>
+                                        <option value="Outros">Outros</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="mensagem" class="form-label small fw-bold">Detalhes (Opcional)</label>
-                                    <textarea class="form-control" id="mensagem" rows="3"
-                                        placeholder="Quantos funcionários? Alguma dúvida específica?"></textarea>
+                                    <textarea class="form-control" id="mensagem" rows="3" placeholder="Quantos funcionários? Alguma dúvida específica?"></textarea>
                                 </div>
 
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-lg text-white fw-bold"
-                                        style="background-color: #25D366;">
+                                    <button type="submit" class="btn btn-lg text-white fw-bold" style="background-color: #25D366; transition: 0.3s;">
                                         <i class="fab fa-whatsapp me-2"></i> ENVIAR PEDIDO NO WHATSAPP
                                     </button>
                                 </div>
-                                <p class="text-center small text-muted mt-3 mb-0">Seus dados estão seguros. Não enviamos
-                                    spam.</p>
+                                <p class="text-center small text-muted mt-3 mb-0">Seus dados estão seguros. Não enviamos spam.</p>
                             </form>
                         </div>
                     </div>
@@ -694,7 +561,6 @@
                         operacional, permitindo que você foque no crescimento do seu negócio.
                     </p>
                     <div>
-                     
                         <a href="https://www.instagram.com/terceirizadp_folha?igsh=MXY3czY1b3BjeG1mOQ%3D%3D"
                             target="_blank" rel="noopener noreferrer" class="me-3 text-white social-hover">
                             <i class="fab fa-instagram fa-lg"></i>
@@ -732,62 +598,42 @@
         </div>
     </footer>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // 1. Configurações e WhatsApp
-document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("whatsappForm");
 
-    const form = document.getElementById("whatsappForm");
+            if (form) {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault(); 
 
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+                    // Coleta os valores dos inputs
+                    const nome = document.getElementById("nome").value.trim();
+                    const empresa = document.getElementById("empresa").value.trim();
+                    const servico = document.getElementById("servico").value;
+                    const mensagem = document.getElementById("mensagem").value.trim();
+        
+                    const texto =
+                        "*Nova Solicitação de Orçamento*\n\n" +
+                        "👤 *Nome:* " + nome + "\n" +
+                        "🏢 *Empresa:* " + empresa + "\n" +
+                        "🛠️ *Serviço:* " + servico + "\n" +
+                        "📝 *Detalhes:* " + (mensagem || "Não informado");
 
-            const nome = document.getElementById("nome").value.trim();
-            const empresa = document.getElementById("empresa").value.trim();
-            const servico = document.getElementById("servico").value;
-            const mensagem = document.getElementById("mensagem").value.trim();
+                    
+                    const numeroWhatsApp = "5511970152735";
+                    const url = "https://api.whatsapp.com/send?phone=" + numeroWhatsApp + "&text=" + encodeURIComponent(texto);
 
-            const texto =
-                "*Nova Solicitação*\n\n" +
-                "👤 *Nome:* " + nome + "\n" +
-                "🏢 *Empresa:* " + empresa + "\n" +
-                "🛠️ *Serviço:* " + servico + "\n" +
-                "📝 *Detalhes:* " + (mensagem || "Não informado");
-
-            const url =
-                "https://wa.me/5511970152735?text=" +
-                encodeURIComponent(texto);
-
-            window.open(url, "_blank");
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.target = "_blank"; 
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
         });
-    }
-
-    const userInput = document.getElementById('user-input');
-
-    if (userInput) {
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-    }
-
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const hiddenPhotos = document.getElementById('hidden-photos');
-
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', () => {
-            hiddenPhotos.classList.add('show');
-            loadMoreBtn.style.display = 'none';
-        });
-    }
-
-});
-</script>
-
-
-
-    
+    </script>
 </body>
 
 </html>

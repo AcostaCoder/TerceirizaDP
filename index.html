@@ -736,63 +736,58 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // 1. Configurações e WhatsApp
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("whatsappForm");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        const nome = document.getElementById("nome").value.trim();
-        const empresa = document.getElementById("empresa").value.trim();
-        const servico = document.getElementById("servico").value;
-        const mensagem = document.getElementById("mensagem").value.trim();
+            const nome = document.getElementById("nome").value.trim();
+            const empresa = document.getElementById("empresa").value.trim();
+            const servico = document.getElementById("servico").value;
+            const mensagem = document.getElementById("mensagem").value.trim();
 
-        const texto =
-            "*Nova Solicitação*\n\n" +
-            "👤 *Nome:* " + nome + "\n" +
-            "🏢 *Empresa:* " + empresa + "\n" +
-            "🛠️ *Serviço:* " + servico + "\n" +
-            "📝 *Detalhes:* " + (mensagem || "Não informado");
+            const texto =
+                "*Nova Solicitação*\n\n" +
+                "👤 *Nome:* " + nome + "\n" +
+                "🏢 *Empresa:* " + empresa + "\n" +
+                "🛠️ *Serviço:* " + servico + "\n" +
+                "📝 *Detalhes:* " + (mensagem || "Não informado");
 
-        const url =
-            "https://wa.me/5511970152735?text=" +
-            encodeURIComponent(texto);
+            const url =
+                "https://wa.me/5511970152735?text=" +
+                encodeURIComponent(texto);
 
-        window.open(url, "_blank");
-    });
+            window.open(url, "_blank");
+        });
+    }
 
-});
+    const userInput = document.getElementById('user-input');
 
-        
-        function exibirBotaoWhatsapp() {
-            const chatWin = document.getElementById('chat-window');
-            const btnDiv = document.createElement('div');
-            btnDiv.innerHTML = `<button onclick="window.open('https://wa.me/5511970152735', '_blank')" style="background:#25d366; color:white; border:none; padding:10px; border-radius:10px; cursor:pointer; margin-top:10px;">🟢 Falar com Especialista</button>`;
-            chatWin.appendChild(btnDiv);
-            chatWin.scrollTop = chatWin.scrollHeight;
-        }
-
-        document.getElementById('user-input').addEventListener('keypress', (e) => {
+    if (userInput) {
+        userInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') sendMessage();
         });
+    }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            const hiddenPhotos = document.getElementById('hidden-photos');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const hiddenPhotos = document.getElementById('hidden-photos');
 
-            if (loadMoreBtn) {
-                loadMoreBtn.addEventListener('click', () => {
-                    hiddenPhotos.classList.add('show'); // Mostra as fotos
-                    loadMoreBtn.style.display = 'none'; // Esconde o botão após clicar
-
-               });
-            }
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            hiddenPhotos.classList.add('show');
+            loadMoreBtn.style.display = 'none';
         });
+    }
 
-    </script>
+});
+</script>
+
+
+
+    
 </body>
 
 </html>

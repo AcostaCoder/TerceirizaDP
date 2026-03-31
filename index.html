@@ -758,25 +758,20 @@
 document.getElementById('whatsappForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value.trim();
-    const empresa = document.getElementById('empresa').value.trim();
-    const servico = document.getElementById('servico').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
+    var nome = document.getElementById('nome').value;
+    var empresa = document.getElementById('empresa').value;
+    var servico = document.getElementById('servico').value;
+    var mensagem = document.getElementById('mensagem').value; 
 
-    const texto =
-`*NOVA SOLICITAÇÃO DO SITE*
+    var texto = "*Nova Solicitação*\n\n" +
+                "👤 *Nome:* " + nome + "\n" +
+                "🏢 *Empresa:* " + empresa + "\n" +
+                "🛠️ *Serviço:* " + servico + "\n" +
+                "📝 *Detalhes:* " + (mensagem ? mensagem : "Não informado");
 
-👤 *Nome:* ${nome}
-🏢 *Empresa:* ${empresa}
-🛠️ *Serviço:* ${servico}
-📝 *Detalhes:* ${mensagem || "Não informado"}`;
+    var numeroWhatsApp = "5511970152735";
 
-    const numeroWhatsApp = "5511970152735";
-
-    window.open(
-        `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`,
-        "_blank"
-    );
+    window.open("https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto), "_blank");
 });
 
         

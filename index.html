@@ -737,27 +737,31 @@
     <script>
         // 1. Configurações e WhatsApp
         
-document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var nome = document.getElementById('nome').value;
-    var empresa = document.getElementById('empresa').value;
-    var servico = document.getElementById('servico').value;
-    var mensagem = document.getElementById('mensagem').value;
+    const nomeInput = document.getElementById("nome");
+    const empresaInput = document.getElementById("empresa");
+    const servicoInput = document.getElementById("servico");
+    const mensagemInput = document.getElementById("mensagem");
 
-    var texto =
+    const nome = nomeInput.value.trim();
+    const empresa = empresaInput.value.trim();
+    const servico = servicoInput.value;
+    const mensagem = mensagemInput.value.trim();
+
+    const texto =
         "*Nova Solicitação*\n\n" +
         "👤 *Nome:* " + nome + "\n" +
         "🏢 *Empresa:* " + empresa + "\n" +
         "🛠️ *Serviço:* " + servico + "\n" +
         "📝 *Detalhes:* " + (mensagem || "Não informado");
 
-    var numeroWhatsApp = "5511970152735";
+    const url =
+        "https://wa.me/5511970152735?text=" +
+        encodeURIComponent(texto);
 
-    window.open(
-        "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto),
-        "_blank"
-    );
+    window.open(url, "_blank");
 });
 
         
